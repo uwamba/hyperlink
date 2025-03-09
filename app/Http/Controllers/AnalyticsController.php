@@ -32,11 +32,6 @@ class AnalyticsController extends Controller
     }
 
     // Customer Analytics (Activity Count)
-    public function customerAnalytics($clientId)
-    {
-        $activityCount = CustomerActivity::where('client_id', $clientId)->count();
-
-        return response()->json(['activity_count' => $activityCount]);
-    }
+    
 }
 
